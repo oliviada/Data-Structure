@@ -1,0 +1,36 @@
+import java.lang.Math;
+import java.util.Scanner;
+
+
+public class Prime {
+
+    public static void main (String[] args){
+
+        Scanner scanner = new Scanner(System.in);
+
+        //Gets integer from users input
+        //integer from user is stored as number
+        System.out.println("Please enter an integer");
+        int number = scanner.nextInt();
+
+        // creates an integer and assigns value 2 to it
+        int p = 2;
+
+        //Iteration that prints all prime factors
+        while ( number > 0){
+
+            if (number >= Math.sqrt(number)){
+                if (number % p == 0){
+
+                    System.out.println(+p);
+                    number = number/p;
+                }
+                else {
+
+                    p=p+1;
+                }
+            }
+            else {
+                System.out.println(+number);
+                break;
+            }
